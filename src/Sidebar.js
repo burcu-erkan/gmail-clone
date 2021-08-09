@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import "./Sidebar.css";
 import {Button, IconButton} from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
@@ -13,12 +13,18 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import PersonIcon from '@material-ui/icons/Person';
 import DuoIcon from '@material-ui/icons/Duo';
 import PhoneIcon from '@material-ui/icons/Phone';
-import {useDispatch} from "react-redux";
-import {openSendMessage} from "./features/mailSlice"
+import {useDispatch, useSelector} from "react-redux";
+import {openSendMessage} from "./features/mailSlice";
+//import { countMail } from './features/mailSlice';
+
 
 
 function Sidebar() {
     const dispatch = useDispatch();
+    //const count = useSelector(countMail);
+  
+
+    
     return (
         <div className="sidebar">
          <Button 
@@ -27,7 +33,7 @@ function Sidebar() {
          startIcon= {<AddIcon fontSize="large"/>}>
              Compose
          </Button>
-         <SidebarOption Icon={InboxIcon} title="Inbox" number={54}selected={true}/>
+         <SidebarOption Icon={InboxIcon} title="Inbox" number={4}selected={true}/>
          <SidebarOption Icon={StarIcon} title="Starred" number={54}/>
          <SidebarOption Icon={AccessTimeIcon} title="Snoozed" number={54}/>
          <SidebarOption Icon={LabelImportantIcon} title="Important" number={54}/>
