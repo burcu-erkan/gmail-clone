@@ -35,9 +35,9 @@ function App() {
   
   return (
    <Router>
-       {!user ? (
+       {/* {!user ? (
       <Login/>
-    ): (
+    ): ( */}
     <div className="app">
     <Header/>
 ( <div className="app_body">
@@ -52,7 +52,7 @@ function App() {
       </Switch>
     </div>)
     {sendMessageIsOpen && <SendMail/>}
- </div>)}
+ </div>)
      
     </Router>
   );
